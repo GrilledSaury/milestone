@@ -9,4 +9,22 @@ export const state = reactive({
   timer: 0
 })
 
+let last = 0
+
+function go () {
+  if (state.timer <= 0) {
+    state.timer = 0
+    return
+  }
+  const now = Date.now()
+  if (now - last > 1000) {
+    last = now
+    return
+  }
+  state.timer -= now - last
+  last = now
+}
+
+setInterval(go, 100)
+
 export default state
