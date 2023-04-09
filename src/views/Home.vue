@@ -22,6 +22,7 @@ const parseTime = () => moment(state.timer - 8 * 3600e3).format('HH:mm:ss') // U
 </script>
 
 <template>
+  <MenuBar title="Home" ghost="true"/>
   <div class="h-screen w-screen flex items-center justify-center">
     <div class="w-2/5 rounded-full flex items-center justify-center all-transition ring-8 cursor-pointer" :class="[style.bgColor_light, style.textColor_dark, style.ringColor, state.timer === 0 ? 'shadow-lg' : 'shadow-inner'].join(' ')" style="height: 40vw">
       <div v-if="state.timer === 0" class="flex flex-col items-center justify-center w-full h-full" @click="start">
@@ -36,5 +37,4 @@ const parseTime = () => moment(state.timer - 8 * 3600e3).format('HH:mm:ss') // U
       </div>
     </div>
   </div>
-  <MenuBar title="Home" />
 </template>
