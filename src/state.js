@@ -2,7 +2,10 @@ import { reactive, watch } from 'vue'
 
 export const SS = window.sessionStorage
 
+export const LS = window.localStorage
+
 export const state = reactive({
+  locale: Number(LS.locale || 0),
   loading: false,
   user: SS.user ? JSON.parse(SS.user) : null,
   style: 'BLUE',
