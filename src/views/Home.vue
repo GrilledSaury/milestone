@@ -42,7 +42,7 @@ async function stop () {
   document.removeEventListener('visibilitychange', reset)
 }
 
-const parseTime = () => moment(state.timer - 10 * 3600e3).format('HH:mm:ss') // UTC+8
+const parseTime = () => moment(state.timer - 8 * 3600e3).format('HH:mm:ss') // UTC+8
 
 
 </script>
