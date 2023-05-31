@@ -63,5 +63,4 @@ const parseTime = () => moment(state.timer - 8 * 3600e3).format('HH:mm:ss') // U
       </div>
     </div>
   </div>
-  {{ state }}
 </template>
