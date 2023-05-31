@@ -16,7 +16,7 @@ const defaultStyle = {
   textColor_dark: 'text-gray-700',
   textColor_unavail: 'text-gray-500',
   bgColor_light: 'bg-gray-200',
-  bgColor_dark: 'text-gray-700',
+  bgColor_dark: 'bg-gray-700',
   bgColor_unavail: 'bg-gray-100',
   borderColor_light: 'border-gray-200',
   borderColor_dark: 'border-gray-500',

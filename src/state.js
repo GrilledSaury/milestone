@@ -8,15 +8,19 @@ export const state = reactive({
   locale: Number(LS.locale || 0),
   loading: false,
   user: SS.user ? JSON.parse(SS.user) : null,
-  style: 'BLUE',
-  timer: 0
+  style: 'DEFAULT',
+  timer: 0,
+  settle: false,
+  blueLock: true
 })
 
 let last = 0
 
 function go () {
-  if (state.timer <= 0) {
+  if (state.timer === 0) return
+  if (state.timer < 0) {
     state.timer = 0
+    state.settle = true
     return
   }
   const now = Date.now()
